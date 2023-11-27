@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script text="text/javascript">
+        $(function() {
+            $('a#btn1').bind('click', function() {
+                $.getJSON('/_process', {
+                    txt : $('input[name="txt1"]').val(),
+                   }, function(data) {
+                   $('#show').text(data.value);
+                });
+                return false;
+              });
+         });
+    </script>
+</head>
+<body>
+    <form>
+        Input data :- <input type="text" name="txt1" >
+        <a href="#" id=btn1> <button> click </button> </a>
+    </form>
+    You Enter :-
+	<p1>This are git session</p1>
+		<p2>Git is very important and userful and interesting too</p2>
+
+    <label id="show" style=""> </label>
+</body>
+</html>
